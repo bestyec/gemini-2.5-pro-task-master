@@ -1,15 +1,18 @@
-# Task Master
+# Task Master - Gemini 2.5 Pro Expo Edition
 
-### by [@eyaltoledano](https://x.com/eyaltoledano)
+---
+**Note:** This is a modified version of the original [claude-task-master](https://github.com/eyaltoledano/claude-task-master) by Eyal Toledano & Ralph Khreish. This fork has been adapted and optimized to leverage the capabilities of Google's Gemini 2.5 Pro Expo for enhanced task management and AI interactions within the development workflow.
+---
 
-A task management system for AI-driven development with Claude, designed to work seamlessly with Cursor AI.
+### by [@eyaltoledano](https://x.com/eyaltoledano) & [@RalphEcom](https://github.com/Crunchyman-ralph) (Original Authors)
+
+A task management system for AI-driven development, originally designed for Claude, now adapted for Gemini 2.5 Pro Expo, and intended to work seamlessly with AI-assisted editors like Cursor.
 
 ## Requirements
 
 - Node.js 14.0.0 or higher
-- Anthropic API key (Claude API)
-- Anthropic SDK version 0.39.0 or higher
-- OpenAI SDK (for Perplexity API integration, optional)
+- Google Generative AI API Key (for Gemini models)
+- (Optional) Perplexity API Key (for research features)
 
 ## Configuration
 
@@ -21,11 +24,11 @@ The script can be configured through environment variables in a `.env` file at t
 
 ### Optional Configuration
 
-- `MODEL`: Specify which Claude model to use (default: "gemini-1.5-flash")
-- `MAX_TOKENS`: Maximum tokens for model responses (default: 8192)
+- `MODEL`: Specify which Gemini model to use (default: "gemini-1.5-flash") - *Ensure the model name is compatible with the Google Generative AI API.*
+- `MAX_TOKENS`: Maximum tokens for model responses (default: 8192) - *Check model limits.*
 - `TEMPERATURE`: Temperature for model responses (default: 0.5)
-- `PERPLEXITY_API_KEY`: Your Perplexity API key for research-backed subtask generation
-- `PERPLEXITY_MODEL`: Specify which Perplexity model to use (default: "sonar-medium-online")
+- `PERPLEXITY_API_KEY`: Your Perplexity API key for research-backed features (optional).
+- `PERPLEXITY_MODEL`: Specify which Perplexity model to use (default: "llama-3-sonar-large-32k-online") - *See Perplexity documentation for available models.*
 - `DEBUG`: Enable debug logging (default: false)
 - `LOG_LEVEL`: Log level - debug, info, warn, error (default: info)
 - `DEFAULT_SUBTASKS`: Default number of subtasks when expanding (default: 3)
